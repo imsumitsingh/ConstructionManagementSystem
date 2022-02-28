@@ -1,0 +1,133 @@
+﻿@model CMS.Models.tbl_User_Master
+
+
+<div class="modal fade text-left show" id="popModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel34" aria-modal="true" style="display: none; padding-right: 17px;">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h3 class="modal-title" id="myModalLabel34">
+                            @{
+                              var heading= Model.id == 0 ? "Add User" : "Update User";
+                            }
+                            @heading
+                    </h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+
+                    <div class="modal-body">
+
+
+
+
+                        <form id="frm" action="/User/AddUpdateUser" method="post" enctype="multipart/form-data">
+                            <div class="form-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="timesheetinput1">Name</label>
+                                            <input type="hidden" asp-for="id" />
+                                            <input asp-for="name" type="text" class="form-control" placeholder="employee name">
+                                            <span asp-validation-for="name"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="timesheetinput1">Mobile</label>
+
+                                            <input asp-for="mobile" type="text" class="form-control" placeholder="employee name">
+                                            <span asp-validation-for="mobile"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="timesheetinput1">Email</label>
+
+                                            <input asp-for="email" type="text" class="form-control" placeholder="employee name">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="timesheetinput1">Village</label>
+
+                                            <input asp-for="village" type="text" class="form-control" placeholder="employee name">
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="timesheetinput1">Post</label>
+
+                                            <input asp-for="post" type="text" class="form-control" placeholder="employee name">
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="timesheetinput1">Police Station</label>
+
+                                            <input asp-for="policeStation" type="text" class="form-control" placeholder="employee name">
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="timesheetinput1">District</label>
+
+                                            <input asp-for="district" type="text" class="form-control" placeholder="employee name">
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="timesheetinput1">State</label>
+
+                                            <input asp-for="state" type="text" class="form-control" placeholder="employee name">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="timesheetinput1">Country</label>
+
+                                            <input asp-for="country" type="text" class="form-control" placeholder="employee name">
+
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                             <input type="hidden" asp-for="photo" />
+                                            <label for="timesheetinput1">Profile Picture</label>
+                                            <div class="custom-file">
+
+                                                <input type="file" class="custom-file-input" asp-for="SavePhoto" id="inputGroupFile01">
+                                                <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                            <div class="form-actions right">
+                                <button data-dismiss="modal" aria-label="Close" type="button" class="btn btn-danger mr-1">
+                                    <i class="ft-x"></i> Cancel
+                                </button>
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="la la-check-square-o"></i> Save
+                                </button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+</div>
+ 
+ 
